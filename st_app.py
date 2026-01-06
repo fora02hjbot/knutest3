@@ -23,7 +23,7 @@ if platform.system() == 'Linux':
     rc('font', family='NanumGothic')
 
 # Page Config
-st.set_page_config(page_title='강원대 2026 캠프,
+st.set_page_config(page_title='강원대 2026 캠프',
                    page_icon='😊',
                    layout='wide',
                    initial_sidebar_state='auto')  # 페이지 너비에 따라서 달라짐
@@ -198,4 +198,5 @@ elif eda_option == "동반 인원 수에 따른 팁 변화":
     fig = px.line(avg_tip_by_size, x='size', y='tip', markers=True,
                   title='인원 수에 따른 평균 팁 변화')
     st.plotly_chart(fig, use_container_width=True)
+
     st.info("동반 인원 수가 많아질수록 팁이 증가하는 경향을 볼 수 있습니다. 하지만 일정 인원 수 이후에는 팁이 정체되거나 감소할 수도 있습니다.")
